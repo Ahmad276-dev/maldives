@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/pexels-artem-beliaikin-853199.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: cornsilk;
+    animation-name: body;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+/*@keyframes body{
+    10%{background-image: url(images/pexels-artem-beliaikin-853199.jpg);}
+    50%{background-image: url(images/pexels-photo-1024969.jpeg);}
+    75%{background-image: url(images/pexels-photo-3601425-1.jpeg);}
+    90%{background-image: url(images/pexels-photo-747964.jpeg);}
+}*/
+.main{
+    position: absolute;
+    top: 35%;
+    right: 300px;
+}
+h1{
+    
+    font-family: fantasy;
+    letter-spacing: 3px;
+    font-size: 4em;
+    color: ivory;
+    border-left: 5px solid ivory;
+    animation-name: mald;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes mald{
+    from{transform: translateX(0);}
+    to{transform: translateX(20px);}
+}
+h4{
+    font-family: cursive;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color:black;
+}
+#bar{
+    width: 170px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    background: rgba(255, 255, 255, 0.4);
+    
+
+    
+}
+
+h2{
+    
+   position: absolute;
+   top: 30%;
+   width: 30vw;
+
+   margin-left: -4em;
+   transform: rotate(-90deg);
+   color: black;
+   font-family: fantasy;
+   font-size: 2.1em;
+   text-transform: capitalize;
+   font-weight: 100;
+   opacity: 0.6;
+}
+#vid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+@media (min-aspect-ratio: 16/9){
+    #vid{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #vid{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.cont{
+    border: 0.2px solid cornsilk;
+    display: flex;
+    width: 100px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin-top: 6px;
+}
+.cont img{
+    width: 40px;
+    height: 30px;
+
+}
+/* for mobile */
+
+@media (max-width:600px){
+    .main{
+        position: absolute;
+        top: 35%;
+        left:40px;
+    }
+    #bar{
+        display: none;
+    }
+    h4{
+        
+        width: 80vw;
+    }
+    #vid{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: none;
+    }
+    @media (min-aspect-ratio: 16/9){
+        #vid{
+            width: 100vw;
+            height: 100%;
+            object-fit: fill;
+            
+        }
+    }
+    @media (max-aspect-ratio: 16/9){
+        #vid{
+            width: 100vw;
+            height: 100%;
+            object-fit: fill;
+            
+        }
+
+    }
+}
